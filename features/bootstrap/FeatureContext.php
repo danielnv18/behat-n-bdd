@@ -75,4 +75,29 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
         print "Created screenshot " . $filename . " at " . $path;
     }
 
+//    /**
+//     * @Given There is :type in the site
+//     */
+//    public function thereAreInTheSite($type)
+//    {
+//        // Return all nids of nodes of type "page".
+//        $nids = db_select('node', 'n')
+//          ->fields('n', array('nid'))
+//          ->fields('n', array('type'))
+//          ->condition('n.type', 'page')
+//          ->execute()
+//          ->fetchCol();
+//
+//        if (empty($nids)) {
+//            $node = (object) array(
+//              'title' => 'Lorem ipmsum '.rand(0,100),
+//              'type' => $type,
+//              'body' => $this->getRandom()->string(255),
+//            );
+//            $this->nodeCreate($node);
+//        }
+//    }
+
+
+
 }
