@@ -9,10 +9,11 @@ Feature: Authentication
     And I fill in "Password" with "admin"
     And I press "Log in"
 
+  @javascript
   Scenario: Logging in
     Then I should see "My Account"
-    And I should see "Log out"
-    
+    And I should see "Log out1"
+
   Scenario: Logging out
     When I follow "Log out"
     Then I am on the homepage
