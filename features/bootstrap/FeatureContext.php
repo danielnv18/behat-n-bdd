@@ -22,11 +22,11 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
     {
     }
 
-//    /**
-//     * @Given I wait :seconds seconds
-//     */
-//    public function iWaitSeconds($seconds)
-//    {
-//        sleep($seconds);
-//    }
+    /**
+     * @Given I wait :seconds seconds
+     */
+    public function iWaitSeconds($seconds)
+    {
+        sleep($seconds);
+    }
 }
