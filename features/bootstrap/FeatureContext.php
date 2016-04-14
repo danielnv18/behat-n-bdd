@@ -49,7 +49,7 @@ class FeatureContext extends RawMinkContext implements Context, SnippetAccepting
     public function after(AfterScenarioScope $scope)  {
         $feature_title = str_replace(' ','-',strtolower($scope->getFeature()->getTitle()));
         $scenario_title = str_replace(' ','-',strtolower($scope->getScenario()->getTitle()));
-        $path = __DIR__.'../../../screenshots/'.$feature_title.'/'.$scenario_title;
+        $path = __DIR__.'../../../screenshots/'.$feature_title.'/'.time().'/'.$scenario_title;
 
         $driver = $this->getSession()->getDriver();
 
