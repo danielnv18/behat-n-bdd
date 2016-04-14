@@ -30,4 +30,12 @@ class FeatureContext extends RawMinkContext implements Context, SnippetAccepting
         sleep($seconds);
     }
 
+    /**
+     * @Then I should see the login box
+     */
+    public function iShouldSeeTheLoginBox()
+    {
+        $this->assertSession()->elementExists('css', '#block-user-login');
+    }
+
 }
