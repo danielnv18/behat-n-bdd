@@ -16,4 +16,5 @@ Feature: Authentication
     When I fill in "Username" with "admin"
     And I fill in "Password" with "admin"
     And I press "Log in"
-    Then I click "Log out"
+    And I follow "Log out"
+    Then I am on the homepage
