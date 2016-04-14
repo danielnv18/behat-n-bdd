@@ -12,7 +12,7 @@ Feature: Authentication
   @javascript
   Scenario: Logging in
     Then I should see "My Account"
-    And I should see "Log out1"
+    And I should see "Log out"
 
   Scenario: Logging out
     When I follow "Log out"
