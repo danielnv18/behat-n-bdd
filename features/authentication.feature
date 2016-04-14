@@ -13,6 +13,8 @@ Feature: Authentication
     Then I should see "My Account"
     And I should see "Log out"
 
+  @javascript
   Scenario: Logging out
     When I follow "Log out"
     Then I am on the homepage
+    And I should see the login box

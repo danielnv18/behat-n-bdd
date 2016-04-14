@@ -4,12 +4,12 @@ use Behat\Behat\Context\Context;
 use Behat\Behat\Context\SnippetAcceptingContext;
 use Behat\Gherkin\Node\PyStringNode;
 use Behat\Gherkin\Node\TableNode;
-use Behat\MinkExtension\Context\MinkContext;
+use Behat\MinkExtension\Context\RawMinkContext;
 
 /**
  * Defines application features from the specific context.
  */
-class FeatureContext extends MinkContext implements Context, SnippetAcceptingContext
+class FeatureContext extends RawMinkContext implements Context, SnippetAcceptingContext
 {
     /**
      * Initializes context.
@@ -29,4 +29,5 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
     {
         sleep($seconds);
     }
+
 }
