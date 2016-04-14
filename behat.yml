@@ -1,12 +1,21 @@
 default:
-    suites:
-        default:
-            contexts:
-                - FeatureContext
-                - Behat\MinkExtension\Context\MinkContext
-    extensions:
-        Behat\MinkExtension:
-            base_url: http://behat.dev/ # Here goes your url where your sites is hosted
-            goutte: ~
-            selenium2:
-                wd_host: http://127.0.0.1:4444/wd/hub
+  suites:
+    default:
+      contexts:
+        - FeatureContext
+        - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\MinkContext
+  extensions:
+    Behat\MinkExtension:
+      goutte: ~
+      selenium2:
+        wd_host: http://127.0.0.1:4444/wd/hub
+      base_url: http://behat.dev/  # Replace with your site's URL
+      javascript_session: 'selenium2'
+    Drupal\DrupalExtension:
+      blackbox: ~
+      api_driver: 'drupal'
+      drush:
+        alias: 'local'
+      drupal:
+        drupal_root: '../drupal'

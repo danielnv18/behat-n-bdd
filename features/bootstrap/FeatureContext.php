@@ -7,11 +7,12 @@ use Behat\Gherkin\Node\TableNode;
 use Behat\MinkExtension\Context\RawMinkContext;
 use Behat\Mink\Driver\Selenium2Driver;
 use Behat\Behat\Hook\Scope\AfterScenarioScope;
+use Drupal\DrupalExtension\Context\RawDrupalContext;
 
 /**
  * Defines application features from the specific context.
  */
-class FeatureContext extends RawMinkContext implements Context, SnippetAcceptingContext
+class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
 {
     /**
      * Initializes context.
